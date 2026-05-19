@@ -11,8 +11,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .container {
             background-color: #fff;
@@ -20,7 +21,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
+            margin: auto;
         }
         h2 {
             text-align: center;
@@ -86,6 +88,38 @@
             <div class="form-group">
                 <label for="direccion">Dirección de Envío</label>
                 <textarea id="direccion" name="direccion" rows="3" required placeholder="Calle, ciudad, CP"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono de Contacto</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +34 600 000 000">
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" name="ciudad" required placeholder="Tu ciudad">
+            </div>
+            <div class="form-group">
+                <label for="codigo_postal">Código Postal</label>
+                <input type="text" id="codigo_postal" name="codigo_postal" required placeholder="Ej: 28001">
+            </div>
+            <div class="form-group">
+                <label for="fecha_entrega">Fecha de Entrega Preferida</label>
+                <input type="date" id="fecha_entrega" name="fecha_entrega">
+            </div>
+            <div class="form-group">
+                <label for="metodo_pago">Método de Pago</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">Comentarios Adicionales</label>
+                <textarea id="comentarios" name="comentarios" rows="2" placeholder="Notas sobre la entrega..."></textarea>
+            </div>
+            <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                <input type="checkbox" id="terminos" name="terminos" required style="width: auto;">
+                <label for="terminos" style="margin-bottom: 0;">Acepto los términos y condiciones</label>
             </div>
             <button type="submit">Finalizar Compra</button>
         </form>
